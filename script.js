@@ -1,6 +1,40 @@
-//1. create an array of 5 person objects, the objhects should contain first name last name, age and job properties, jobb should be a boolean.
+//1. create an array of 5 person objects, the objects should contain first name last name, age and job properties, jobb should be a boolean.
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
+let Persons = [
+    {
+        firstName: "Hector",
+        lastName: "Acevedo",
+        age: 41,
+        job: true
+    },
+    {
+        firstName: "Lise",
+        lastName: "Johnsen",
+        age: 39,
+        job: true
+    },
+    {
+        firstName: "Madelen",
+        lastName: "Acevedo",
+        age: 10,
+        job: false
+    },
+    {
+        firstName: "Lasse",
+        lastName: "Acevedo",
+        age: 6,
+        job: false
+    },
+    {
+        firstName: "Alex",
+        lastName: "Eide",
+        age: 22,
+        job: true
+    }
+    
+    
+]
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
