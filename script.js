@@ -40,7 +40,7 @@ console.table(persons);
 
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
 
-console.log(persons[0].firstName + " " + [persons[0].lastName]);
+console.log(persons[0].firstName + "" + [persons[0].lastName]);
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
@@ -49,13 +49,17 @@ console.log(persons[0].firstName + " " + [persons[0].lastName]);
 //create a method in every person object that returns first and last name, call it fullName. This can be done manually for each one or with a loop.
 //Print fullName of the second person in the array by calling the method.
 
-persons.forEach((person) => {
-  person.fullName = function () {
+// Add a fullName method to each person object
+
+
+for (let i = 0; i < persons.length; i++) {
+  persons[i].fullName = function () {
     return this.firstName + " " + this.lastName;
   };
-});
+}
 
-console.log(persons[1].fullName());
+console.log(persons[2].fullName());
+
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
@@ -69,13 +73,34 @@ console.log(persons[2]);
 console.table(persons[2]);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
 //5. Person three is throwing a giant party! create a function called fotballPubben(). The function should check if the person is over 18, print "party time" if they are and "too young" if they are not. It should also print the name of the person.
 // use a loop to call the function for every person in the array.
-//------------------------------------------------------------------------------------------------------------------------------------------------
+
+function footballPubben(person) {
+  if (person.age >= 18) {
+    console.log(person.fullName() + ": party time");
+  } else {
+    console.log(person.fullName() + ": too young");
+  }
+}
+
+persons.forEach((person) => {
+  footballPubben(person);
+});
+
+//--------------------------------------------------------------------------------------------------------------------
 
 //6. It's time for school! Create a function called university. It should take in an person object as well as type of degree (bachelors or masters) as arguments.
 // The function should update age and add two properties called "degree" and "student loan". The value of age, degree and student loan should change depending on what degree
 //was passed into the function. Send one person to uni and print the result.
+
+function university(person, degree) {
+  
+}
+
+
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 // 7. API TIME!
