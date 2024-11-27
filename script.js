@@ -1,48 +1,62 @@
 //1. create an array of 5 person objects, the objects should contain first name last name, age and job properties, jobb should be a boolean.
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
-let Persons = [
+let persons = [
   {
     firstName: "Hector",
     lastName: "Acevedo",
+    fullName: "Hector Acevedo",
     age: 41,
     job: true,
   },
   {
     firstName: "Lise",
     lastName: "Johnsen",
+    fullName: "Lise Johnsen",
     age: 39,
     job: true,
   },
   {
     firstName: "Madelen",
     lastName: "Acevedo",
+    fullName: "Madelen Acevedo",
     age: 10,
     job: false,
   },
   {
     firstName: "Lasse",
     lastName: "Acevedo",
+    fullName: "Lasse Acevedo",
     age: 6,
     job: false,
   },
   {
     firstName: "Alex",
     lastName: "Eide",
+    fullName: "Alex Eide",
     age: 22,
     job: false,
   },
 ];
 
-console.log(Persons);
+// console.log(persons);
+// console.table(persons);
 
 
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
+
+// console.log(persons[0].firstName + " " + [persons[0].lastName]);
+
+
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //3. That was tiresome.. just so much typing. Lets write a method to that we never need to that again..
 //create a method in every person object that returns first and last name, call it fullName. This can be done manually for each one or with a loop.
 //Print fullName of the second person in the array by calling the method.
+
+
+
+
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //4. Its the third person's birthday! And their job status changed. Update their age and job status using dot notation.
