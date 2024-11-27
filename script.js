@@ -5,47 +5,42 @@ let persons = [
   {
     firstName: "Hector",
     lastName: "Acevedo",
-    fullName: "Hector Acevedo",
     age: 41,
     job: true,
   },
   {
     firstName: "Lise",
     lastName: "Johnsen",
-    fullName: "Lise Johnsen",
     age: 39,
     job: true,
   },
   {
     firstName: "Madelen",
     lastName: "Acevedo",
-    fullName: "Madelen Acevedo",
     age: 10,
     job: false,
   },
   {
     firstName: "Lasse",
     lastName: "Acevedo",
-    fullName: "Lasse Acevedo",
     age: 6,
     job: false,
   },
   {
     firstName: "Alex",
     lastName: "Eide",
-    fullName: "Alex Eide",
     age: 22,
     job: false,
   },
 ];
 
-// console.log(persons);
-// console.table(persons);
+console.log(persons[4]);
+console.table(persons);
 
 
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
 
-// console.log(persons[0].firstName + " " + [persons[0].lastName]);
+console.log(persons[0].firstName + " " + [persons[0].lastName]);
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
@@ -54,12 +49,24 @@ let persons = [
 //create a method in every person object that returns first and last name, call it fullName. This can be done manually for each one or with a loop.
 //Print fullName of the second person in the array by calling the method.
 
+persons.forEach((person) => {
+  person.fullName = function () {
+    return this.firstName + " " + this.lastName;
+  };
+});
 
+console.log(persons[1].fullName());
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //4. Its the third person's birthday! And their job status changed. Update their age and job status using dot notation.
+
+persons[2].age = 11; 
+persons[2].job = true;
+
+console.log(persons[2]);
+console.table(persons[2]);
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //5. Person three is throwing a giant party! create a function called fotballPubben(). The function should check if the person is over 18, print "party time" if they are and "too young" if they are not. It should also print the name of the person.
