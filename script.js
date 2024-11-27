@@ -30,18 +30,12 @@ let Persons = [
     firstName: "Alex",
     lastName: "Eide",
     age: 22,
-    job: true,
+    job: false,
   },
 ];
 
 console.log(Persons);
 
-
-
-
-   
-
-    
 
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
 //------------------------------------------------------------------------------------------------------------------------------------------------
