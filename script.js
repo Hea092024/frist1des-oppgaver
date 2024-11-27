@@ -97,7 +97,7 @@ persons.forEach((person) => {
 //was passed into the function. Send one person to uni and print the result.
 
 function university(person, degree) {
-  
+  if ()
 }
 
 
