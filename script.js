@@ -2,39 +2,47 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 let Persons = [
-    {
-        firstName: "Hector",
-        lastName: "Acevedo",
-        age: 41,
-        job: true
-    },
-    {
-        firstName: "Lise",
-        lastName: "Johnsen",
-        age: 39,
-        job: true
-    },
-    {
-        firstName: "Madelen",
-        lastName: "Acevedo",
-        age: 10,
-        job: false
-    },
-    {
-        firstName: "Lasse",
-        lastName: "Acevedo",
-        age: 6,
-        job: false
-    },
-    {
-        firstName: "Alex",
-        lastName: "Eide",
-        age: 22,
-        job: true
-    }
+  {
+    firstName: "Hector",
+    lastName: "Acevedo",
+    age: 41,
+    job: true,
+  },
+  {
+    firstName: "Lise",
+    lastName: "Johnsen",
+    age: 39,
+    job: true,
+  },
+  {
+    firstName: "Madelen",
+    lastName: "Acevedo",
+    age: 10,
+    job: false,
+  },
+  {
+    firstName: "Lasse",
+    lastName: "Acevedo",
+    age: 6,
+    job: false,
+  },
+  {
+    firstName: "Alex",
+    lastName: "Eide",
+    age: 22,
+    job: true,
+  },
+];
+
+console.log(Persons);
+
+
+
+
+   
+
     
-    
-]
+
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
