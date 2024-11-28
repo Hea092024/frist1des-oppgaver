@@ -37,11 +37,9 @@ let persons = [
 console.log(persons[4]);
 console.table(persons);
 
-
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
 
 console.log(persons[0].firstName + " " + [persons[0].lastName]);
-
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -51,8 +49,7 @@ console.log(persons[0].firstName + " " + [persons[0].lastName]);
 
 // Add a fullName method to each person object
 
-
-for (let i = 0; i < persons.length ; i++) {
+for (let i = 0; i < persons.length; i++) {
   persons[i].fullName = function () {
     return this.firstName + " " + this.lastName;
   };
@@ -60,20 +57,16 @@ for (let i = 0; i < persons.length ; i++) {
 
 console.log(persons[2].fullName());
 
-
-
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //4. Its the third person's birthday! And their job status changed. Update their age and job status using dot notation.
 
-persons[2].age = 11; 
+persons[2].age = 11;
 persons[2].job = true;
 
 console.log(persons[2]);
 console.table(persons[2]);
 //------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 //5. Person three is throwing a giant party! create a function called fotballPubben(). The function should check if the person is over 18, print "party time" if they are and "too young" if they are not. It should also print the name of the person.
 // use a loop to call the function for every person in the array.
@@ -95,20 +88,23 @@ persons.forEach((person) => {
 //6. It's time for school! Create a function called university. It should take in an person object as well as type of degree (bachelors or masters) as arguments.
 // The function should update age and add two properties called "degree" and "student loan". The value of age, degree and student loan should change depending on what degree
 //was passed into the function. Send one person to uni and print the result.
-const alex = persons[4]
-const hecc = persons[0]
+
+// const alex = persons[4]
+// const hecc = persons[0]
+
 function university(person, b) {
   if (b === "bachelors") {
     person.age += 2;
-    person.degree = "bachelors"
-
-
-      }
- 
-};
-university(persons[0], "bachelors");
-university(alex, "bachelors");
-console.table(hecc);
+    person.degree = "bachelors";
+    person.student_loan = 5000;
+  } else if (b === "masters") {
+    person.age += 3;
+    person.degree = "masters";
+    person.student_loan = 10000;
+  }
+}
+university(persons[0], "masters");
+console.table(persons[0]);
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
