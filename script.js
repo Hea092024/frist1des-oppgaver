@@ -92,19 +92,34 @@ persons.forEach((person) => {
 // const alex = persons[4]
 // const hecc = persons[0]
 
-function university(person, b) {
-  if (b === "bachelors") {
-    person.age += 2;
-    person.degree = "bachelors";
-    person.student_loan = 5000;
-  } else if (b === "masters") {
-    person.age += 3;
-    person.degree = "masters";
-    person.student_loan = 10000;
+// function university(person, b) {
+//   if (b === "bachelors") {
+//     person.age += 2;
+//     person.degree = "bachelors";
+//     person.student_loan = 5000;
+//   } else if (b === "masters") {
+//     person.age += 3;
+//     person.degree = "masters";
+//     person.student_loan = 10000;
+//   }
+// }
+// university(persons[0], "masters");
+// console.table(persons[0]);
+
+async function getBreeds() {
+  const url = "https://dog.ceo/api/breeds/list/all";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+    return json.message; // returns breeds list
+  } catch (error) {
+    console.error(error.message);
   }
 }
-university(persons[0], "masters");
-console.table(persons[0]);
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
@@ -113,6 +128,33 @@ console.table(persons[0]);
 // Read the documentation of this dog API: https://dog.ceo/dog-api/documentation/
 // Fetch 4 dogs of the same breed or sub-breed and display them in the DOM
 //feel free to change the ID of the images and/or add css.
+
+// async function getData() {
+//   const url = "https://dog.ceo/api/breeds/list/all";
+//   try {
+//     const response = await fetch(url);
+//     if (!response.ok) {
+//       throw new Error(`Response status: ${response.status}`);
+//     }
+
+//     const json = await response.json();
+//     console.log(json);
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// }
+
+fetch("https://dog.ceo/api/breeds/list/all")
+.then(res => {
+  return res.json();
+})
+.then(data =>{
+  console.log(data);
+})
+  .catch(error => console.log(error));
+  
+
+
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 //BONUS!!
