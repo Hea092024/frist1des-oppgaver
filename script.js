@@ -129,20 +129,6 @@ async function getBreeds() {
 // Fetch 4 dogs of the same breed or sub-breed and display them in the DOM
 //feel free to change the ID of the images and/or add css.
 
-// async function getData() {
-//   const url = "https://dog.ceo/api/breeds/list/all";
-//   try {
-//     const response = await fetch(url);
-//     if (!response.ok) {
-//       throw new Error(`Response status: ${response.status}`);
-//     }
-
-//     const json = await response.json();
-//     console.log(json);
-//   } catch (error) {
-//     console.error(error.message);
-//   }
-// }
 
 fetch("https://dog.ceo/api/breed/hound/images/random/4")
 .then(res => {
@@ -151,7 +137,7 @@ fetch("https://dog.ceo/api/breed/hound/images/random/4")
 .then(data =>{
   console.log(data);
 })
-  // .catch(error => console.log(error));
+  .catch(error => console.log(error));
   
 
 
