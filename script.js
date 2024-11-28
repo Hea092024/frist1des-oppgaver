@@ -40,7 +40,7 @@ console.table(persons);
 
 //2. print First and last name of the first person in the array. using dot notation on firstname and bracket notation last name
 
-console.log(persons[0].firstName + "" + [persons[0].lastName]);
+console.log(persons[0].firstName + " " + [persons[0].lastName]);
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
@@ -52,7 +52,7 @@ console.log(persons[0].firstName + "" + [persons[0].lastName]);
 // Add a fullName method to each person object
 
 
-for (let i = 0; i < persons.length; i++) {
+for (let i = 0; i < persons.length ; i++) {
   persons[i].fullName = function () {
     return this.firstName + " " + this.lastName;
   };
@@ -95,10 +95,20 @@ persons.forEach((person) => {
 //6. It's time for school! Create a function called university. It should take in an person object as well as type of degree (bachelors or masters) as arguments.
 // The function should update age and add two properties called "degree" and "student loan". The value of age, degree and student loan should change depending on what degree
 //was passed into the function. Send one person to uni and print the result.
+const alex = persons[4]
+const hecc = persons[0]
+function university(person, b) {
+  if (b === "bachelors") {
+    person.age += 2;
+    person.degree = "bachelors"
 
-function university(person, degree) {
-  if ()
-}
+
+      }
+ 
+};
+university(persons[0], "bachelors");
+university(alex, "bachelors");
+console.table(hecc);
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
