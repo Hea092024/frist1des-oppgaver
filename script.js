@@ -135,7 +135,13 @@ fetch("https://dog.ceo/api/breed/hound/images/random/4")
   return res.json();
 })
 .then(data =>{
-  console.log(data);
+  const dogImages = data.message;
+  // console.log(data);
+
+  document.getElementById("dog1").scr = dogImages[0];
+  document.getElementById("dog2").scr = dogImages[1];
+  document.getElementById("dog3").scr = dogImages[2];
+  document.getElementById("dog4").scr = dogImages[3];
 })
   .catch(error => console.log(error));
   
