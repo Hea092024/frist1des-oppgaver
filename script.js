@@ -144,14 +144,14 @@ async function getBreeds() {
 //   }
 // }
 
-fetch("https://dog.ceo/api/breeds/list/all")
+fetch("https://dog.ceo/api/breed/hound/images/random/4")
 .then(res => {
   return res.json();
 })
 .then(data =>{
   console.log(data);
 })
-  .catch(error => console.log(error));
+  // .catch(error => console.log(error));
   
 
 
