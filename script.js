@@ -92,34 +92,20 @@ persons.forEach((person) => {
 // const alex = persons[4]
 // const hecc = persons[0]
 
-// function university(person, b) {
-//   if (b === "bachelors") {
-//     person.age += 2;
-//     person.degree = "bachelors";
-//     person.student_loan = 5000;
-//   } else if (b === "masters") {
-//     person.age += 3;
-//     person.degree = "masters";
-//     person.student_loan = 10000;
-//   }
-// }
-// university(persons[0], "masters");
-// console.table(persons[0]);
-
-async function getBreeds() {
-  const url = "https://dog.ceo/api/breeds/list/all";
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-
-    const json = await response.json();
-    return json.message; 
-  } catch (error) {
-    console.error(error.message);
+function university(person, b) {
+  if (b === "bachelors") {
+    person.age += 2;
+    person.degree = "bachelors";
+    person.student_loan = 5000;
+  } else if (b === "masters") {
+    person.age += 3;
+    person.degree = "masters";
+    person.student_loan = 10000;
   }
 }
+university(persons[0], "masters");
+console.table(persons[0]);
+
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
@@ -136,7 +122,7 @@ fetch("https://dog.ceo/api/breed/hound/images/random/4")
 })
 .then(data =>{
   const dogImages = data.message;
-  // console.log(data);
+  console.log(data);
 
   document.getElementById("dog1").src = dogImages[0];
   document.getElementById("dog2").src = dogImages[1];
