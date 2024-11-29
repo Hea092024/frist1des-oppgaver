@@ -115,7 +115,7 @@ async function getBreeds() {
     }
 
     const json = await response.json();
-    return json.message; // returns breeds list
+    return json.message; 
   } catch (error) {
     console.error(error.message);
   }
