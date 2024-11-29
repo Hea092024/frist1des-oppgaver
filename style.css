@@ -1,0 +1,33 @@
+* {
+margin: 0;
+box-sizing: border-box;
+}
+
+.dogs {
+  width: 350px;
+  max-height: 350px;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    " a b "
+    " c d ";
+}
+
+#dog1 {
+  grid-area: a;
+}
+
+#dog2 {
+  grid-area: b;
+}
+
+#dog3 {
+  grid-area: c;
+}
+
+#dog4 {
+  grid-area: d;
+}
